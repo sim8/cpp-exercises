@@ -7,3 +7,36 @@
     - No return means successful
     - Anything else - unsuccessful
 - Not every OS uses return
+- `<<` - "put to"
+- `::` - found in namespace
+  - Can make namespace visible (meaning it doesn't need to be specified again) by `using namespace std;`
+- `import` is new to c++20
+- Older and more reliable is `#include <iostream>`
+- Initialization
+  - `double d1 = 2.3;`
+  - `double d1 {2.3};` universal form. Does not auto-convert types
+- `auto` - can default to this type (deduces type)
+- Namespaces
+  - Local, class, namespace
+  - Anything not in a block is global
+- Objects are destroyed at the end of the scope
+- Constants
+  - `const` will not be changed after creation
+    - `const` can be declared on function arg (very common)
+  - `constexpr` evaluated at compile time (e.g. for value of pi)
+    - Can be used before a function. C++ version of pure functions!
+    - Can be used to eval constant + non-constant expressions
+    - Can use `consteval` instead if you _only_ want constant results
+    - Required in a few places such as
+      - Array bounds
+      - Case labels
+      - Template value args
+- `char v[6]` array of chars
+- `char* p` pointer to char
+- `*p` "contents of" (object that p points to)
+- `&v[3]` "address of" (address of object in memory)
+  - In a declaration, `boolean&` means "reference to"
+    - Similar to a pointer, but you don't need `*` prefix to access value
+    - References are useful for function args if you want to mutate those args (reference ensures it's not copied)
+- `for (auto x : v)` (no braces) simple loop
+- `for (auto& x : v)` holds a reference rather than copying
