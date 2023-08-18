@@ -5,4 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_exercises main.cpp
         matrix.cpp
-        matrix.hpp)
+        matrix.hpp
+        deck_of_cards.cpp
+        deck_of_cards.hpp
+)
