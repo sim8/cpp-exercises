@@ -3,6 +3,7 @@
 //
 
 #include "deck_of_cards.hpp"
+#include <stdexcept>
 
 DeckOfCards::DeckOfCards() {
     // Populate the cards array with all 52 cards
@@ -14,4 +15,14 @@ DeckOfCards::DeckOfCards() {
             cards.push_back(card); // Add the card to the vector
         }
     }
+}
+
+Card DeckOfCards::dealCard() {
+    if (cards.empty()) {
+        throw std::runtime_error("Trying to deal card but cards empty");
+    }
+
+    Card card = cards.back();
+    cards.pop_back();
+    return card;
 }

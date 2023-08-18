@@ -24,6 +24,8 @@ class DeckOfCards {
 
 public:
     DeckOfCards();
+
+    Card dealCard();
 };
 
 
