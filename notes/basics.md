@@ -1,10 +1,11 @@
 # Basics
 
 - C++ is compiled
+- Standard library provided by every c++ implementation. Implemented in c++ for the most part
 - `main()` is required
   - usually returns int
+    - No return means successful // do this
     - 0 means successful
-    - No return means successful
     - Anything else - unsuccessful
 - Not every OS uses return
 - `<<` - "put to"
@@ -16,6 +17,12 @@
   - `double d1 = 2.3;`
   - `double d1 {2.3};` universal form. Does not auto-convert types
 - `auto` - can default to this type (deduces type)
+- Types
+  - Unsigned - use for bitwise logical operations
+  - `sizeOf` returns size of type in implementation
+  - Use standard library type alias for types of a fixed size, if needed
+  - `0b` prefix for a binary integer literal, `0x` hexademical
+  - Can use single quotes to break up long literal numbers for readability
 - Namespaces
   - Local, class, namespace
   - Anything not in a block is global
